@@ -15,15 +15,15 @@
 </head>
 <body class="font-open-sans bg-gray-900 text-white text-sm">
     {{-- Header --}}
-    <header class="border-b border-green-600 flex mx-auto items-center justify-between px-12 py-6">
+    <header class="border-b border-green-600 flex mx-auto items-center justify-between px-32 py-6">
         <a href="/">
             <img src="{{ asset('img/creatorseries-primary-logo.svg') }}" alt="Logo" class="w-64 flex-none">
         </a>
         <div class="flex items-center">
             <ul class="flex space-x-8">
-                <li><a href="#" class="hover:text-green-400">Home</a></li>
-                <li><a href="#" class="hover:text-green-400">About</a></li>
-                <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                <li><a href="#" class="hover:text-green-400 font-extrabold text-lg">MDC</a></li>
+                <li><a href="#" class="hover:text-green-400 font-extrabold text-lg">Libertadores</a></li>
+                <li><a href="#" class="hover:text-green-400 font-extrabold text-lg">Sudamericana</a></li>
             </ul>
         </div>
     </header>

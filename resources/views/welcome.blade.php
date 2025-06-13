@@ -1,31 +1,39 @@
 @extends('partials.main')
 
 @section('content')
-    <div class="max-w-7xl mx-auto">
+    <div class="container mx-auto px-8">
+        <h2 class="text-blue-400 uppercase tracking-wide text-xl font-semibold mb-6">UEFA Euro 2024 Tournament Bracket</h2>
+        <!-- Tournament Title -->
+        <div class="flex flex-col items-center gap-6">
+            <h1 class="text-4xl font-bold text-white mb-4">UEFA Euro 2024</h1>
+        </div>
         <!-- Desktop Layout -->
-        <div class="hidden lg:flex justify-between items-center gap-8">
-
+        <div class="hidden md:flex justify-between items-center gap-8">
             <!-- Left Side - Quarter Finals -->
             <div class="flex flex-col gap-6">
                 <!-- Match 1: Spain vs Georgia -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇪🇸</span>
+                        <div class="flex items-center gap-6">
+                            {{-- Flag --}}
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo" class="w-64 flex-none">
+                                {{-- <span class="text-white text-sm font-bold">🇪🇸</span> --}}
                             </div>
-                            <span class="font-medium text-sm">ESP</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ESPAÑA</span>
                         </div>
-                        <span class="font-bold text-lg">4</span>
+                        <span class="text-gray-500 font-bold text-lg">4</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-800 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇬🇪</span>
+                        <div class="flex items-center gap-6">
+                            {{-- Flag --}}
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Vélez Sarsfield.png') }}" alt="Logo" class="w-64 flex-none">
+                                {{-- <span class="text-white text-sm font-bold">🇬🇪</span> --}}
                             </div>
-                            <span class="font-medium text-sm">GEO</span>
+                            <span class="text-gray-800 font-extrabold text-sm">GEORGIA</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                 </div>
 
