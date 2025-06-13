@@ -15,7 +15,7 @@
 </head>
 <body class="font-open-sans bg-gray-900 text-white text-sm">
     {{-- Header --}}
-    <header class="border-b border-green-600 flex mx-auto items-center justify-between px-8 py-4">
+    <header class="border-b border-green-600 flex mx-auto items-center justify-between px-12 py-6">
         <a href="/">
             <img src="{{ asset('img/creatorseries-primary-logo.svg') }}" alt="Logo" class="w-64 flex-none">
         </a>
@@ -29,12 +29,18 @@
     </header>
 
     {{-- Main --}}
-    <main>
+    <main class="py-8">
         @yield('content')
     </main>
 
     {{-- Footer --}}
-    <footer>
+    <footer class="border-t border-green-600 text-center py-6">
+        <p class="text-gray-400">
+            &copy; {{ date('Y') }} Creator Series. All rights reserved.
+        </p>
+        <p class="text-gray-500 text-xs mt-2">
+            Built with <a href="https://laravel.com" class="text-green-400 hover:underline">Laravel</a> and <a href="https://tailwindcss.com" class="text-green-400 hover:underline">Tailwind CSS</a>.
+        </p>
     </footer>
 </body>
 </html>
