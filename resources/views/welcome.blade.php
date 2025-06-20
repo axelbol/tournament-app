@@ -38,68 +38,68 @@
                 </div>
 
                 <!-- Match 2: Germany vs Denmark -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇩🇪</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">GER</span>
+                            <span class="text-gray-800 font-extrabold text-sm">GERMANY</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇩🇰</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">DEN</span>
+                            <span class="text-gray-800 font-extrabold text-sm">DENMARK</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                 </div>
 
                 <!-- Match 3: Portugal vs Slovenia -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇵🇹</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">POR</span>
+                            <span class="text-gray-500 font-extrabold text-sm">PORTUGAL</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇸🇮</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">SVN</span>
+                            <span class="text-gray-500 font-bold text-sm">SERBIA</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                 </div>
 
                 <!-- Match 4: France vs Belgium -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇫🇷</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">FRA</span>
+                            <span class="text-gray-800 font-extrabold text-sm">FRANCE</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇧🇪</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">BEL</span>
+                            <span class="text-gray-800 font-extrabold text-sm">BELGICA</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                 </div>
             </div>
@@ -107,60 +107,85 @@
             <!-- Semi Finals Left -->
             <div class="flex flex-col gap-12">
                 <!-- Spain vs Germany -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇪🇸</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ESP</span>
+                            <span class="text-gray-800 font-extrabold text-sm">SPAIN</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇩🇪</span>
+                        <div class="flex items-center gap-5">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">GER</span>
+                            <span class="text-gray-800 font-extrabold text-sm">GERMANY</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                 </div>
 
                 <!-- Portugal vs France -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇵🇹</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">POR</span>
+                            <span class="text-gray-800 font-extrabold text-sm">PORTUGAL</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇫🇷</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">FRA</span>
+                            <span class="text-gray-800 font-extrabold text-sm">FRANCE</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semis -->
+            <div class="flex flex-col">
+                <!-- Spain vs Germany -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
+                            </div>
+                            <span class="text-gray-800 font-extrabold text-sm">SPAIN</span>
+                        </div>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-5">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
+                            </div>
+                            <span class="text-gray-800 font-extrabold text-sm">GERMANY</span>
+                        </div>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                 </div>
             </div>
 
             <!-- Final -->
-            <div class="flex flex-col items-center gap-6">
+            <div class="flex flex-col items-center gap-4">
                 <!-- Trophy -->
                 <div class="text-6xl">🏆</div>
 
                 <!-- Final Match -->
                 <div class="bg-white border-2 border-yellow-400 rounded-lg p-6 shadow-lg min-w-56">
                     <div class="text-center mb-4">
-                        <div class="w-8 h-8 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                            <span class="text-white text-sm font-bold">🇪🇸</span>
+                        <div class="w-12 h-12 bg-white rounded-full mx-auto mb-2 flex items-center justify-center">
+                            <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                         </div>
                         <div class="text-lg font-bold text-gray-600">España</div>
                         <div class="text-sm text-gray-500 uppercase">CAMPEÓN</div>
@@ -168,22 +193,22 @@
 
                     <div class="flex items-center justify-between bg-yellow-50 rounded p-3 mb-3">
                         <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇪🇸</span>
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ESP</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ESPAÑA</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
 
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ENG</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ENGLAND</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
 
                     <div class="text-center mt-3">
@@ -192,49 +217,74 @@
                 </div>
             </div>
 
+            <!-- Semis -->
+            <div class="flex flex-col gap-12">
+                <!-- Netherlands vs England -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
+                            </div>
+                            <span class="text-gray-800 font-extrabold text-sm">ARGENTINA</span>
+                        </div>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
+                            </div>
+                            <span class="text-gray-800 font-extrabold text-sm">ENGLAND</span>
+                        </div>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Semi Finals Right -->
             <div class="flex flex-col gap-12">
                 <!-- Netherlands vs England -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇳🇱</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">NED</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ARGENTINA</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ENG</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ENGLAND</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
                 </div>
 
                 <!-- England vs Switzerland -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ENG</span>
+                            <span class="text-gray-800 font-extrabold text-sm">BRASIL</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇨🇭</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">SUI</span>
+                            <span class="text-gray-800 font-extrabold text-sm">SUIZA</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                 </div>
             </div>
@@ -242,90 +292,90 @@
             <!-- Right Side - Quarter Finals -->
             <div class="flex flex-col gap-6">
                 <!-- Match 1: Romania vs Netherlands -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇷🇴</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ROU</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ROMANIA</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇳🇱</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">NED</span>
+                            <span class="text-gray-800 font-extrabold text-sm">NEDERLANDS</span>
                         </div>
-                        <span class="font-bold text-lg">3</span>
+                        <span class="text-gray-500 font-bold text-lg">3</span>
                     </div>
                 </div>
 
                 <!-- Match 2: Austria vs Turkey -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-400 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇦🇹</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">AUT</span>
+                            <span class="text-gray-800 font-extrabold text-sm">AUSTRIA</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-700 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇹🇷</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">TUR</span>
+                            <span class="text-gray-800 font-extrabold text-sm">TURKEY</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
                 </div>
 
                 <!-- Match 3: England vs Slovakia -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ENG</span>
+                            <span class="text-gray-800 font-extrabold text-sm">PERU</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇸🇰</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">SVK</span>
+                            <span class="text-gray-800 font-extrabold text-sm">BOLIVIA</span>
                         </div>
-                        <span class="font-bold text-lg">1</span>
+                        <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
                 </div>
 
                 <!-- Match 4: Switzerland vs Italy -->
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
                     <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇨🇭</span>
+                        <div class="flex items-center gap-6">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">SUI</span>
+                            <span class="text-gray-800 font-extrabold text-sm">SUIZA</span>
                         </div>
-                        <span class="font-bold text-lg">2</span>
+                        <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
-                                <span class="text-white text-xs font-bold">🇮🇹</span>
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="font-medium text-sm">ITA</span>
+                            <span class="text-gray-800 font-extrabold text-sm">ITALY</span>
                         </div>
-                        <span class="font-bold text-lg">0</span>
+                        <span class="text-gray-500 font-bold text-lg">0</span>
                     </div>
                 </div>
             </div>
