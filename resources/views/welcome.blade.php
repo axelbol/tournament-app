@@ -187,11 +187,11 @@
                         <div class="w-12 h-12 bg-white rounded-full mx-auto mb-2 flex items-center justify-center">
                             <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                         </div>
-                        <div class="text-lg font-bold text-gray-600">España</div>
-                        <div class="text-sm text-gray-500 uppercase">CAMPEÓN</div>
+                        <div class="text-lg font-bold text-gray-800 uppercase">España</div>
+                        <div class="text-sm text-gray-600 uppercase">CAMPEÓN</div>
                     </div>
 
-                    <div class="flex items-center justify-between bg-yellow-50 rounded p-3 mb-3">
+                    <div class="flex items-center justify-between hover:bg-yellow-500 rounded-md p-3">
                         <div class="flex items-center gap-2">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                                 <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
@@ -201,7 +201,7 @@
                         <span class="text-gray-500 font-bold text-lg">2</span>
                     </div>
 
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between hover:bg-yellow-500 rounded-md p-3">
                         <div class="flex items-center gap-2">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                                 <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="text-center mt-3">
-                        <span class="bg-yellow-500 text-white px-3 py-1 rounded text-xs font-bold">FINAL</span>
+                        <span class="bg-yellow-500 text-green-600 px-3 py-1 rounded text-xs font-extrabold">FINAL</span>
                     </div>
                 </div>
             </div>
