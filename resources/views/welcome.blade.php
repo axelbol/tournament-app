@@ -1,7 +1,7 @@
 @extends('partials.main')
 
 @section('content')
-    <div class="container mx-auto px-8">
+    <div class="container mx-auto">
         <h2 class="text-blue-400 uppercase tracking-wide text-xl font-semibold mb-6">UEFA Euro 2024 Tournament Bracket</h2>
         <!-- Tournament Title -->
         <div class="flex flex-col items-center gap-6">
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="text-center mt-3">
-                        <span class="bg-yellow-500 text-green-600 px-3 py-1 rounded text-xs font-extrabold">FINAL</span>
+                        <span class="bg-yellow-500 text-white px-3 py-1 rounded text-xs font-extrabold">FINAL</span>
                     </div>
                 </div>
             </div>
