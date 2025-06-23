@@ -1,18 +1,21 @@
 @extends('partials.main')
 
 @section('content')
-    <div class="container mx-auto">
+    <div class="container mx-auto p-4">
         <h2 class="text-blue-400 uppercase tracking-wide text-xl font-semibold mb-6">UEFA Euro 2024 Tournament Bracket</h2>
         <!-- Tournament Title -->
-        <div class="flex flex-col items-center gap-6">
+        <div class="flex flex-col items-center gap-6 mb-8 text-center">
             <h1 class="text-4xl font-bold text-white mb-4">UEFA Euro 2024</h1>
         </div>
         <!-- Desktop Layout -->
-        <div class="hidden md:flex justify-between items-center gap-8">
+        <div class="hidden md:flex justify-center items-center gap-16">
             <!-- Left Side - Quarter Finals -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-20">
                 <!-- Match 1: Spain vs Georgia -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -right-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             {{-- Flag --}}
@@ -38,7 +41,10 @@
                 </div>
 
                 <!-- Match 2: Germany vs Denmark -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -right-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -59,8 +65,11 @@
                     </div>
                 </div>
 
-                <!-- Match 3: Portugal vs Slovenia -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <!-- Match 3: Portugal vs Serbia -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -right-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -82,7 +91,10 @@
                 </div>
 
                 <!-- Match 4: France vs Belgium -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -right-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -105,9 +117,14 @@
             </div>
 
             <!-- Semi Finals Left -->
-            <div class="flex flex-col gap-12">
+            <div class="flex flex-col gap-64">
                 <!-- Spain vs Germany -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Vertical connecting line and horizontal line -->
+                    <div class="absolute -left-7 top-12 w-0.5 h-44 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -left-7 w-6 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -right-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -129,7 +146,12 @@
                 </div>
 
                 <!-- Portugal vs France -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Vertical connecting line and horizontal line -->
+                    <div class="absolute -left-7 top-14 w-0.5 h-44 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -left-7 w-6 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -right-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -153,8 +175,12 @@
 
             <!-- Semis -->
             <div class="flex flex-col">
-                <!-- Spain vs Germany -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <!-- Spain vs Portugal -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Vertical connecting line and horizontal line -->
+                    <div class="absolute -left-7 top-1/2 w-0.5 h-90 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute -left-7 top-1/2 w-7 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -169,7 +195,7 @@
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                                 <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
                             </div>
-                            <span class="text-gray-800 font-extrabold text-sm">GERMANY</span>
+                            <span class="text-gray-800 font-extrabold text-sm">PORTUGAL</span>
                         </div>
                         <span class="text-gray-500 font-bold text-lg">1</span>
                     </div>
@@ -182,7 +208,10 @@
                 <div class="text-6xl">🏆</div>
 
                 <!-- Final Match -->
-                <div class="bg-white border-2 border-yellow-400 rounded-lg p-6 shadow-lg min-w-56">
+                <div class="bg-white border-2 border-yellow-400 rounded-lg p-6 shadow-lg min-w-56 relative">
+                    <div class="absolute -left-16 top-2/5 w-16 h-0.5 bg-yellow-400 transform -translate-y-1/2"></div>
+                    <div class="absolute -right-16 top-2/5 w-16 h-0.5 bg-yellow-400 transform -translate-y-1/2"></div>
+
                     <div class="text-center mb-4">
                         <div class="w-12 h-12 bg-white rounded-full mx-auto mb-2 flex items-center justify-center">
                             <img src="{{ asset('img/logos/Universitario de Deportes.png') }}" alt="Logo">
@@ -218,9 +247,13 @@
             </div>
 
             <!-- Semis -->
-            <div class="flex flex-col gap-12">
-                <!-- Netherlands vs England -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+            <div class="flex flex-col">
+                <!-- Argentina vs England -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Vertical connecting line and horizontal line -->
+                    <div class="absolute -right-7 top-1/2 w-0.5 h-90 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute -right-7 top-1/2 w-7 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -243,9 +276,14 @@
             </div>
 
             <!-- Semi Finals Right -->
-            <div class="flex flex-col gap-12">
-                <!-- Netherlands vs England -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+            <div class="flex flex-col gap-64">
+                <!-- Argentina vs England -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Vertical connecting line and horizontal line -->
+                    <div class="absolute -right-7 top-12 w-0.5 h-44 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -right-7 w-6 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -left-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -266,8 +304,13 @@
                     </div>
                 </div>
 
-                <!-- England vs Switzerland -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <!-- Brasil vs Switzerland -->
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Vertical connecting line and horizontal line -->
+                    <div class="absolute -right-7 top-14 w-0.5 h-44 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -right-7 w-6 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+                    <div class="absolute top-1/2 -left-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -290,9 +333,12 @@
             </div>
 
             <!-- Right Side - Quarter Finals -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-20">
                 <!-- Match 1: Romania vs Netherlands -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -left-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -314,7 +360,10 @@
                 </div>
 
                 <!-- Match 2: Austria vs Turkey -->
-                <div class="bg-white border border-green-400 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-400 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -left-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -336,7 +385,10 @@
                 </div>
 
                 <!-- Match 3: England vs Slovakia -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -left-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -358,7 +410,10 @@
                 </div>
 
                 <!-- Match 4: Switzerland vs Italy -->
-                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48">
+                <div class="bg-white border border-green-500 rounded-lg p-4 shadow-sm min-w-48 relative">
+                    <!-- Horizontal connecting line -->
+                    <div class="absolute top-1/2 -left-10 w-10 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center gap-6">
                             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
