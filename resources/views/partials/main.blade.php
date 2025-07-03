@@ -12,6 +12,8 @@
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- Livewire Styles --}}
+    @livewireStyles
 </head>
 <body class="font-open-sans bg-gray-900 text-white text-sm">
     {{-- Header --}}
@@ -42,5 +44,10 @@
             Built with <a href="https://laravel.com" class="text-green-400 hover:underline">Laravel</a> and <a href="https://tailwindcss.com" class="text-green-400 hover:underline">Tailwind CSS</a>.
         </p>
     </footer>
+    {{-- Livewire Scripts --}}
+    @livewireScripts
+
+    {{-- Stack de scripts adicionales como html2canvas --}}
+    @stack('scripts')
 </body>
 </html>
