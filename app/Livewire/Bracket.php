@@ -11,12 +11,6 @@ class Bracket extends Component
     public $currentRound = 'round16';
     public $winner = null;
 
-    // Add these for better performance
-    protected $teamCache = [];
-
-    // Skip re-rendering when only internal state changes
-    protected $skipRender = false;
-
     public function mount()
     {
         $this->initializeBracket();
@@ -26,6 +20,7 @@ class Bracket extends Component
     {
         // Initialize teams for Round of 16
         $this->teams = [
+            // Round of 16 teams (8 matches)
             ['id' => 1, 'name' => 'INT', 'code' => 'INT', 'eliminated' => false],
             ['id' => 2, 'name' => 'FLU', 'code' => 'FLU', 'eliminated' => false],
             ['id' => 3, 'name' => 'MCI', 'code' => 'MCI', 'eliminated' => false],
@@ -69,60 +64,28 @@ class Bracket extends Component
                 ['team1' => null, 'team2' => null, 'winner' => null, 'match_id' => 15],
             ]
         ];
-
-        // Build team cache for faster lookups
-        $this->buildTeamCache();
     }
 
-    private function buildTeamCache()
-    {
-        $this->teamCache = [];
-        foreach ($this->teams as $team) {
-            $this->teamCache[$team['id']] = $team;
-        }
-    }
-
-    // Optimized - single operation to update everything at once
     public function selectWinner($matchId, $teamId, $round)
     {
-        // Find and update match in single loop
-        $matchKey = null;
-        $match = null;
+        // Find the match and set winner
+        foreach ($this->rounds[$round] as $key => $match) {
+            if ($match['match_id'] == $matchId) {
+                $this->rounds[$round][$key]['winner'] = $teamId;
 
-        foreach ($this->rounds[$round] as $key => $m) {
-            if ($m['match_id'] == $matchId) {
-                $matchKey = $key;
-                $match = $m;
+                // Eliminate the losing team
+                $losingTeamId = ($match['team1'] == $teamId) ? $match['team2'] : $match['team1'];
+                $this->eliminateTeam($losingTeamId);
+
+                // Advance winner to next round
+                $this->advanceWinner($teamId, $round, $key);
                 break;
             }
         }
-
-        if ($matchKey !== null) {
-            // Single assignment instead of array access
-            $this->rounds[$round][$matchKey]['winner'] = $teamId;
-
-            // Get losing team and update in one step
-            $losingTeamId = ($match['team1'] == $teamId) ? $match['team2'] : $match['team1'];
-
-            // Update team status directly in cache and array
-            $this->eliminateTeam($losingTeamId);
-
-            // Advance winner immediately
-            $this->advanceWinner($teamId, $round, $matchKey);
-        }
-
-        // Force single re-render
-        $this->skipRender = false;
     }
 
     public function eliminateTeam($teamId)
     {
-        // Update cache first
-        if (isset($this->teamCache[$teamId])) {
-            $this->teamCache[$teamId]['eliminated'] = true;
-        }
-
-        // Update main array
         foreach ($this->teams as $key => $team) {
             if ($team['id'] == $teamId) {
                 $this->teams[$key]['eliminated'] = true;
@@ -157,10 +120,9 @@ class Bracket extends Component
         }
     }
 
-    // Cached team lookup for faster rendering
     public function getTeamById($teamId)
     {
-        return $this->teamCache[$teamId] ?? collect($this->teams)->firstWhere('id', $teamId);
+        return collect($this->teams)->firstWhere('id', $teamId);
     }
 
     public function resetBracket()
