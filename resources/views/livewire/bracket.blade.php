@@ -67,9 +67,9 @@
                         <h3 class="text-lg font-semibold text-center mb-4">Quarter Finals</h3>
                         @foreach($rounds['quarter'] as $index => $match)
                             <div class="bg-gray-800 rounded-lg p-4 border border-gray-700 transition-all duration-200 hover:border-gray-600">
-                                @if($match['team1'] && $match['team2'])
-                                    <div class="space-y-2">
-                                        <!-- Team 1 -->
+                                <div class="space-y-2">
+                                    <!-- Team 1 Slot -->
+                                    @if($match['team1'])
                                         <div class="flex items-center justify-between p-2 rounded cursor-pointer transition-all duration-150 transform hover:scale-105
                                             {{ $match['winner'] == $match['team1'] ? 'bg-green-600 shadow-lg' : 'bg-gray-700 hover:bg-gray-600' }}"
                                             wire:click="selectWinner({{ $match['match_id'] }}, {{ $match['team1'] }}, 'quarter')" wire:loading.attr="disabled"
@@ -80,8 +80,14 @@
                                                 <span class="text-green-300 animate-bounce">✓</span>
                                             @endif
                                         </div>
+                                    @else
+                                        <div class="p-2 rounded bg-gray-800 border border-dashed border-gray-600 text-gray-500 text-center">
+                                            <span>TBD</span>
+                                        </div>
+                                    @endif
 
-                                        <!-- Team 2 -->
+                                    <!-- Team 2 Slot -->
+                                    @if($match['team2'])
                                         <div class="flex items-center justify-between p-2 rounded cursor-pointer transition-all duration-150 transform hover:scale-105
                                             {{ $match['winner'] == $match['team2'] ? 'bg-green-600 shadow-lg' : 'bg-gray-700 hover:bg-gray-600' }}"
                                             wire:click="selectWinner({{ $match['match_id'] }}, {{ $match['team2'] }}, 'quarter')" wire:loading.attr="disabled"
@@ -92,12 +98,12 @@
                                                 <span class="text-green-300 animate-bounce">✓</span>
                                             @endif
                                         </div>
-                                    </div>
-                                @else
-                                    <div class="text-gray-500 text-center py-4">
-                                        <p>Waiting for teams...</p>
-                                    </div>
-                                @endif
+                                    @else
+                                        <div class="p-2 rounded bg-gray-800 border border-dashed border-gray-600 text-gray-500 text-center">
+                                            <span>TBD</span>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -107,9 +113,9 @@
                         <h3 class="text-lg font-semibold text-center mb-4">Semi Finals</h3>
                         @foreach($rounds['semi'] as $index => $match)
                             <div class="bg-gray-800 rounded-lg p-4 border border-gray-700 transition-all duration-200 hover:border-gray-600">
-                                @if($match['team1'] && $match['team2'])
-                                    <div class="space-y-2">
-                                        <!-- Team 1 -->
+                                <div class="space-y-2">
+                                    <!-- Team 1 Slot -->
+                                    @if($match['team1'])
                                         <div class="flex items-center justify-between p-2 rounded cursor-pointer transition-all duration-150 transform hover:scale-105
                                             {{ $match['winner'] == $match['team1'] ? 'bg-green-600 shadow-lg' : 'bg-gray-700 hover:bg-gray-600' }}"
                                             wire:click="selectWinner({{ $match['match_id'] }}, {{ $match['team1'] }}, 'semi')" wire:loading.attr="disabled"
@@ -120,8 +126,14 @@
                                                 <span class="text-green-300 animate-bounce">✓</span>
                                             @endif
                                         </div>
+                                    @else
+                                        <div class="p-2 rounded bg-gray-800 border border-dashed border-gray-600 text-gray-500 text-center">
+                                            <span>TBD</span>
+                                        </div>
+                                    @endif
 
-                                        <!-- Team 2 -->
+                                    <!-- Team 2 Slot -->
+                                    @if($match['team2'])
                                         <div class="flex items-center justify-between p-2 rounded cursor-pointer transition-all duration-150 transform hover:scale-105
                                             {{ $match['winner'] == $match['team2'] ? 'bg-green-600 shadow-lg' : 'bg-gray-700 hover:bg-gray-600' }}"
                                             wire:click="selectWinner({{ $match['match_id'] }}, {{ $match['team2'] }}, 'semi')" wire:loading.attr="disabled"
@@ -132,12 +144,12 @@
                                                 <span class="text-green-300 animate-bounce">✓</span>
                                             @endif
                                         </div>
-                                    </div>
-                                @else
-                                    <div class="text-gray-500 text-center py-4">
-                                        <p>Waiting for teams...</p>
-                                    </div>
-                                @endif
+                                    @else
+                                        <div class="p-2 rounded bg-gray-800 border border-dashed border-gray-600 text-gray-500 text-center">
+                                            <span>TBD</span>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -147,9 +159,9 @@
                         <h3 class="text-lg font-semibold text-center mb-4">Final</h3>
                         @foreach($rounds['final'] as $index => $match)
                             <div class="bg-yellow-900 rounded-lg p-4 border border-yellow-600 transition-all duration-200 hover:border-yellow-500">
-                                @if($match['team1'] && $match['team2'])
-                                    <div class="space-y-2">
-                                        <!-- Team 1 -->
+                                <div class="space-y-2">
+                                    <!-- Team 1 Slot -->
+                                    @if($match['team1'])
                                         <div class="flex items-center justify-between p-2 rounded cursor-pointer transition-all duration-150 transform hover:scale-105
                                             {{ $match['winner'] == $match['team1'] ? 'bg-yellow-600 text-black shadow-lg' : 'bg-gray-700 hover:bg-gray-600' }}"
                                             wire:click="selectWinner({{ $match['match_id'] }}, {{ $match['team1'] }}, 'final')" wire:loading.attr="disabled"
@@ -160,8 +172,14 @@
                                                 <span class="text-yellow-900 animate-bounce">🏆</span>
                                             @endif
                                         </div>
+                                    @else
+                                        <div class="p-2 rounded bg-gray-800 border border-dashed border-gray-600 text-gray-500 text-center">
+                                            <span>TBD</span>
+                                        </div>
+                                    @endif
 
-                                        <!-- Team 2 -->
+                                    <!-- Team 2 Slot -->
+                                    @if($match['team2'])
                                         <div class="flex items-center justify-between p-2 rounded cursor-pointer transition-all duration-150 transform hover:scale-105
                                             {{ $match['winner'] == $match['team2'] ? 'bg-yellow-600 text-black shadow-lg' : 'bg-gray-700 hover:bg-gray-600' }}"
                                             wire:click="selectWinner({{ $match['match_id'] }}, {{ $match['team2'] }}, 'final')" wire:loading.attr="disabled"
@@ -172,12 +190,12 @@
                                                 <span class="text-yellow-900 animate-bounce">🏆</span>
                                             @endif
                                         </div>
-                                    </div>
-                                @else
-                                    <div class="text-gray-500 text-center py-4">
-                                        <p>Waiting for teams...</p>
-                                    </div>
-                                @endif
+                                    @else
+                                        <div class="p-2 rounded bg-gray-800 border border-dashed border-gray-600 text-gray-500 text-center">
+                                            <span>TBD</span>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -198,6 +216,11 @@
     }
     .bg-green-600 {
         animation: winner-glow 1s ease-in-out;
+    }
+
+    /* TBD styling */
+    .border-dashed {
+        border-style: dashed;
     }
     </style>
 </div>
