@@ -120,10 +120,23 @@ class Bracket extends Component
         }
     }
 
+    // Add to your component to reduce re-renders
+    protected $updatesQueryString = [];
+
+    // Cache team lookups
+    private $teamCache = [];
+
     public function getTeamById($teamId)
     {
-        return collect($this->teams)->firstWhere('id', $teamId);
+        if (!isset($this->teamCache[$teamId])) {
+            $this->teamCache[$teamId] = collect($this->teams)->firstWhere('id', $teamId);
+        }
+        return $this->teamCache[$teamId];
     }
+    // public function getTeamById($teamId)
+    // {
+    //     return collect($this->teams)->firstWhere('id', $teamId);
+    // }
 
     public function resetBracket()
     {
