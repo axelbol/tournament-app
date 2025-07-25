@@ -14,6 +14,11 @@
                         <h2 class="text-2xl font-bold">🏆 CHAMPION</h2>
                         <p class="text-xl">{{ $this->getTeamById($winner)['name'] }}</p>
                     </div>
+                    <div class="mt-4">
+                        <button onclick="downloadBracket()" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+                            📸 Download Bracket
+                        </button>
+                    </div>
                 </div>
             @endif
 
@@ -25,8 +30,8 @@
                 </div>
             </div>
 
-            <div class="bracket-container overflow-x-auto">
-                <div class="flex justify-center space-x-12 min-w-max">
+            <div class="bracket-container overflow-x-auto" id="bracket-content">
+                <div class="flex justify-center space-x-12 min-w-max relative">
 
                     <!-- Round of 16 -->
                     <div class="flex flex-col justify-center space-y-6">
@@ -222,5 +227,162 @@
     .border-dashed {
         border-style: dashed;
     }
+
+    /* Print/Download optimizations */
+    @media print {
+        .fixed {
+            position: absolute !important;
+        }
+        body {
+            background: white !important;
+        }
+        .bg-gray-900 {
+            background: white !important;
+            color: black !important;
+        }
+    }
+
+    /* Download-only elements (hidden by default) */
+    .download-only {
+        display: none;
+    }
     </style>
+
+    <!-- HTML2Canvas Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        async function downloadBracket() {
+            try {
+                // Show loading state
+                const button = event.target;
+                const originalText = button.innerHTML;
+                button.innerHTML = '📸 Generating...';
+                button.disabled = true;
+
+                // Get the bracket container
+                const bracketElement = document.getElementById('bracket-content');
+
+                // Create a wrapper div for the download image
+                const downloadWrapper = document.createElement('div');
+                downloadWrapper.style.cssText = `
+                    position: relative;
+                    background: #111827;
+                    padding: 40px;
+                    width: ${bracketElement.scrollWidth + 80}px;
+                    height: ${bracketElement.scrollHeight + 140}px;
+                `;
+
+                // Create and add title
+                const title = document.createElement('div');
+                title.innerHTML = 'Tournament Axel Bracket';
+                title.style.cssText = `
+                    color: white;
+                    font-size: 36px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-family: system-ui, -apple-system, sans-serif;
+                `;
+
+                // Clone the bracket content
+                const clonedBracket = bracketElement.cloneNode(true);
+                clonedBracket.style.cssText = `
+                    overflow: visible;
+                    margin: 0 auto;
+                `;
+
+                // Create watermark
+                const watermark = document.createElement('div');
+                watermark.innerHTML = '@axelbol';
+                watermark.style.cssText = `
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    color: #9ca3af;
+                    font-size: 14px;
+                    font-family: monospace;
+                    opacity: 0.7;
+                `;
+
+                // Assemble the download content
+                downloadWrapper.appendChild(title);
+                downloadWrapper.appendChild(clonedBracket);
+                downloadWrapper.appendChild(watermark);
+
+                // Temporarily add to document (off-screen)
+                downloadWrapper.style.position = 'absolute';
+                downloadWrapper.style.left = '-9999px';
+                downloadWrapper.style.top = '-9999px';
+                document.body.appendChild(downloadWrapper);
+
+                // Create canvas with high quality
+                const canvas = await html2canvas(downloadWrapper, {
+                    backgroundColor: '#111827', // gray-900
+                    scale: 2, // Higher quality
+                    useCORS: true,
+                    allowTaint: false,
+                    width: downloadWrapper.offsetWidth,
+                    height: downloadWrapper.offsetHeight,
+                    scrollX: 0,
+                    scrollY: 0
+                });
+
+                // Remove the temporary wrapper
+                document.body.removeChild(downloadWrapper);
+
+                // Create download link
+                const link = document.createElement('a');
+                link.download = 'tournament-bracket-' + new Date().toISOString().split('T')[0] + '.png';
+                link.href = canvas.toDataURL('image/png', 0.9);
+
+                // Trigger download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Reset button
+                button.innerHTML = originalText;
+                button.disabled = false;
+
+                // Show success message
+                showNotification('Bracket downloaded successfully! 🎉', 'success');
+
+            } catch (error) {
+                console.error('Error generating bracket image:', error);
+
+                // Reset button
+                const button = event.target;
+                button.innerHTML = '📸 Download Bracket';
+                button.disabled = false;
+
+                showNotification('Failed to download bracket. Please try again.', 'error');
+            }
+        }
+
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300 ${
+                type === 'success' ? 'bg-green-600 text-white' :
+                type === 'error' ? 'bg-red-600 text-white' :
+                'bg-blue-600 text-white'
+            }`;
+            notification.textContent = message;
+
+            // Add to page
+            document.body.appendChild(notification);
+
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translate(-50%, -20px)';
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
 </div>
